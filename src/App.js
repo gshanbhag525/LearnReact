@@ -6,24 +6,17 @@ class App extends React.Component {
     super();
 
     this.state = {
-      monsters: [
-        {
-          name: 'Frankeinstein',
-          id: 'a1'
-        },
-        {
-          name: 'Dracula',
-          id: 'a2'
-        },
-        {
-          name: 'Devil',
-          id: 'a3'
-        }
-  
-      ]
+      monsters: []
     };
   }
-  
+
+  // lifecycle method
+  // fetch url response into json (promise)
+  componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+    .then(users =>  this.setState({ monsters : users }));
+  }
   
   render() {
     return (

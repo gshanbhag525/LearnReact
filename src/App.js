@@ -16,7 +16,7 @@ class App extends React.Component {
   // lifecycle method
   // fetch url response into json (promise)
   componentDidMount() {
-    fetch('https://jsonplaceholder.typicode.com/users')
+    fetch('https://my-json-server.typicode.com/gshanbhag525/cat-json/users')
     .then(response => response.json())
     .then(users =>  this.setState({ monsters : users }));
   }

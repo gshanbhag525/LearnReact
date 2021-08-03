@@ -28,8 +28,12 @@ class App extends React. Component {
         <input 
           type='search' 
           placeholder='search those who exist' 
-          onChange={ e => console.log(e.target) }/>
-        <CardList monsters={this.state.monsters}/>
+        onChange={e => {
+          this.setState({ searchField: e.target.value });
+          console.log(this.state);
+          }}
+          />
+        <CardList  monsters={this.state.monsters}/>
           
       </div>
     );

@@ -29,6 +29,9 @@ class App extends React. Component {
     const filteredMonsters = monsters.filter(monster =>
       monster.name.toLowerCase().includes(searchField.toLowerCase())
     )
+    // when state is changed due to search
+    // searchField is set and the app is re-rendered by filtering 
+    // the monsters array and then updating the cardList
     return (
       <div className="App">
         <input 

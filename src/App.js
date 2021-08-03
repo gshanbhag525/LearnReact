@@ -14,6 +14,8 @@ class App extends React. Component {
       monsters: [],
       searchField: ''
     };
+
+    this.handleChange = this.handleChange.bind(this);
   }
 
   // lifecycle method
@@ -22,6 +24,12 @@ class App extends React. Component {
     fetch('https://my-json-server.typicode.com/gshanbhag525/cat-json/users')
     .then(response => response.json())
     .then(users => this.setState({ monsters : users }));
+  }
+
+  handleChange(e) {
+    // e is a synthetic event
+    this.setState({ searchField: e.target.value })
+    // cant get "this" into scope so put it in constructor
   }
 
   render() {
@@ -38,7 +46,7 @@ class App extends React. Component {
       <div className="App">
         <SearchBox 
           placeholder='search those who exist'
-          handleChange={e => this.setState({ searchField: e.target.value })}
+          handleChange={this.handleChange}
         />
         <CardList monsters={filteredMonsters} />       
       </div>

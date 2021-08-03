@@ -28,9 +28,10 @@ class App extends React. Component {
         <input 
           type='search' 
           placeholder='search those who exist' 
-        onChange={e => {
-          this.setState({ searchField: e.target.value });
-          console.log(this.state);
+          onChange={e => {
+            this.setState({ searchField: e.target.value },() => 
+              console.log(this.state)  
+            );
           }}
           />
         <CardList  monsters={this.state.monsters}/>

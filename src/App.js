@@ -2,6 +2,8 @@ import React from 'react'
 
 import { CardList } from './components/card-list/card-list-component';
 
+import { SearchBox } from './components/search-box/search-box.component';
+
 import './App.css';
 
 class App extends React. Component {
@@ -34,10 +36,9 @@ class App extends React. Component {
     // the monsters array and then updating the cardList
     return (
       <div className="App">
-        <input 
-          type='search' 
-          placeholder='search those who exist' 
-          onChange={e => this.setState({ searchField: e.target.value })}
+        <SearchBox 
+          placeholder='search those who exist'
+          handleChange={e => this.setState({ searchField: e.target.value })}
         />
         <CardList monsters={filteredMonsters} />       
       </div>

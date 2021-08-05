@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+#webPageHeading {
+  font-family: 'Cedarville Cursive';
+  font-size: 72px;
+  color: #0ccac4;
+}
+
+h4  {
+  font-family: 'Cedarville Cursive';
+}
+
+h1 {
+  font-family: 'Cedarville Cursive';
+}

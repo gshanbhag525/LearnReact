@@ -43,6 +43,7 @@ class App extends React. Component {
     // the monsters array and then updating the cardList
     return (
       <div className="App">
+        <h1 id="webPageHeading">Cats Yellow Pages</h1>
         <SearchBox 
           placeholder='search those who exist'
           handleChange={this.handleChange}

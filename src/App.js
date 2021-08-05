@@ -15,7 +15,6 @@ class App extends React. Component {
       searchField: ''
     };
 
-    this.handleChange = this.handleChange.bind(this);
   }
 
   // lifecycle method
@@ -26,7 +25,7 @@ class App extends React. Component {
     .then(users => this.setState({ monsters : users }));
   }
 
-  handleChange(e) {
+  handleChange = (e) => {
     // e is a synthetic event
     this.setState({ searchField: e.target.value })
     // cant get "this" into scope so put it in constructor

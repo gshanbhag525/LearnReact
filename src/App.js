@@ -45,7 +45,7 @@ class App extends React. Component {
       <div className="App">
         <h1 id="webPageHeading">Cats in Tech</h1>
         <SearchBox 
-          placeholder='search those who exist'
+          placeholder='Search those who exist'
           handleChange={this.handleChange}
         />
         <CardList monsters={filteredMonsters} />       
